@@ -29,9 +29,9 @@ int getValidInt(const string& prompt) {
 		if (cin.fail()) {
 			// Error message
 			cout << "Invalid input...Please enter an integer\n";
-			// Clear input cache
+			// Clear input cache / discard bad input
 			cin.clear();
-			// 
+			// clear any leftover input
 			cin.ignore(numeric_limits<streamsize>::max(), '\n');
 		}
 		else {
@@ -53,6 +53,28 @@ string getValidString(const string& prompt) {
 
 int main()
 {
-	
+	// declare and initialise variables
+	// cast the type
+	// create a set to contain integers added by the user
+	set<int>numbers;
+
+	// cast type for key-value pair
+	// create a map to associate integers (keys) with strings (values)
+	map<int, string>numberMap;
+
+	// Step 3 
+	// Prompt the user for an input
+	int count = getValidInt("How many integers would you like to store? : ");
+
+	// loop to collect integers and store them in the set
+	for (int i = 0; i < count; i++) {
+		int num = getValidInt("Enter integer # " + to_string(i + 1) + ": ");
+		// insert value into the set
+		numbers.insert(num);
+	}
+
+	// Step 4: Prompt the user for another number, check if the number is in the original set, 
+	// and display a message to the user indicating whether the number was present in the set.
+
 }
 
