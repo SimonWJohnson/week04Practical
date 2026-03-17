@@ -44,8 +44,11 @@ int getValidInt(const string& prompt) {
 
 
 // Function to safely read an string
-string getValidString() {
-
+string getValidString(const string& prompt) {
+	string value;
+	cout << prompt;
+	getline(cin, value);
+	return value;
 };
 
 int main()
