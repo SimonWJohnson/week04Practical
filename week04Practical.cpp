@@ -75,6 +75,14 @@ int main()
 
 	// Step 4: Prompt the user for another number, check if the number is in the original set, 
 	// and display a message to the user indicating whether the number was present in the set.
+	int searchNum = getValidInt("Enter number to search for in set: ");
 
+	// Use the 'count()' function to search for the number within the set
+	if (numbers.count(searchNum ) > 0) {
+		cout << searchNum << " is present in the set \n";
+	}
+	else {
+		cout << searchNum << " is NOT present in the set \n";
+	}
 }
 
